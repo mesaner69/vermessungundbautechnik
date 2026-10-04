@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messmer Vermessung & Bautechnik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        /* Custom styles for the table on mobile */
+        @media (max-width: 768px) {
+            .table-container {
+                overflow-x: auto;
+            }
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center gap-4 mb-4 md:mb-0">
+                <img src="Logo_Messmer.jpg" alt="Logo Messmer" class="h-[120px] w-auto object-contain bg-white rounded p-1" onerror="this.src='https://placehold.co/400x160/ffffff/334155?text=Logo+Messmer'">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800 uppercase tracking-tight">Messmer</h1>
+                    <p class="text-sm text-slate-500 font-semibold">Vermessung & Bautechnik</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:015121076966" class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-5 py-2 rounded-full transition-colors font-medium shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.026 11.026 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    0151 21076966
+                </a>
+                <a href="mailto:messmer@vermessungundbautechnik.de" class="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full transition-colors font-medium shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    E-Mail senden
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="bg-slate-800 text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center max-w-3xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Ihr Partner für Vermessung und Bautechnik</h2>
+                <p class="text-lg md:text-xl text-slate-300 mb-8">Melden Sie sich jederzeit für Ihr Vorhaben per E-Mail oder Telefon!</p>
+                <div class="inline-block bg-orange-500 text-white px-6 py-2 rounded-full font-semibold">
+                    Alexander Messmer – Staatl. gepr. Bautechniker & Vermessungstechniker
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white" id="leistungen">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Leistungsspektrum</h2>
+                    <div class="w-24 h-1 bg-orange-500 mx-auto rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Service 1 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Bauabsteckung</h3>
+                        <p class="text-slate-600 leading-relaxed">GNSS-basierte Absteckung von Baugruben, Fundamenten, Grenzabständen oder sonstigen Bauelementen.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Grenzvisualisierung*</h3>
+                        <p class="text-slate-600 leading-relaxed">Aufzeigen und Sichtbarmachen vorhandener Grenzpunkte auf Basis amtlicher Katasterdaten.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Bestandsaufnahmen & Lagepläne</h3>
+                        <p class="text-slate-600 leading-relaxed">Topografische Geländeaufnahmen, Bestandserfassungen & Erstellung digitaler Lagepläne (PDF / DWG).</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Bauabrechnung & Massenermittlungen</h3>
+                        <p class="text-slate-600 leading-relaxed">Prüffähige Erdmassenberechnungen über digitale Geländemodelle oder Querprofile.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mx-auto mt-8 bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r shadow-sm">
+                    <p class="text-sm text-slate-700 italic">
+                        <strong>*Hinweis:</strong> Keine amtliche oder hoheitliche Vermessung. Die Dienstleistung umfasst ausschließlich das Aufzeigen und Visualisieren vorhandener Grenzpunkte sowie ingenieurtechnische Messungen mittels GNSS-RTK.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center px-4">
+                        <div class="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-3">Flexible Einsatzzeiten</h4>
+                        <p class="text-slate-600">Vermessungs- und Außendiensteinsätze erfolgen flexibel nach Absprache freitags, samstags sowie werktags ab 16:00 Uhr. Ihr regulärer Baustellenbetrieb läuft dadurch uneingeschränkt weiter.</p>
+                    </div>
+                    
+                    <div class="text-center px-4">
+                        <div class="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-3">Transparente Angebote & Abrechnung</h4>
+                        <p class="text-slate-600">Die Abrechnung erfolgt fair nach Punktpauschalen, Fläche (m²) oder festem Stundensatz. So sind Ihre Kosten bereits im Vorfeld genau bekannt.</p>
+                    </div>
+
+                    <div class="text-center px-4">
+                        <div class="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-3">Fachkompetenz & Praxiserfahrung</h4>
+                        <p class="text-slate-600">Expertise aus fundierter Erfahrung im Baubereich. Die Qualifikationen als Vermessungstechniker und staatlich geprüfter Bautechniker garantieren tiefgreifendes Fachverständnis für Ihr gesamtes Bauvorhaben.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Preiskalkulator GNSS Messung</h2>
+                    <p class="text-slate-600">Geben Sie Ihre benötigten Mengen ein, um direkt einen geschätzten Gesamtpreis zu ermitteln.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+                    <div class="table-container p-0">
+                        <table class="w-full text-left border-collapse whitespace-nowrap">
+                            <thead>
+                                <tr class="bg-slate-800 text-white text-sm uppercase tracking-wider">
+                                    <th class="p-4 font-semibold w-12">Pos.</th>
+                                    <th class="p-4 font-semibold">Leistung</th>
+                                    <th class="p-4 font-semibold w-32 text-center">Einheit</th>
+                                    <th class="p-4 font-semibold w-32 text-right">EP (€)</th>
+                                    <th class="p-4 font-semibold w-32 text-center">Menge</th>
+                                    <th class="p-4 font-semibold w-32 text-right">GP (€)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700 text-sm divide-y divide-slate-100" id="calculator-body">
+                                <!-- Fahrtkosten -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">-</td>
+                                    <td class="p-4 font-medium">Fahrtkosten pro gefahrenem Kilometer (An- und Abfahrt)</td>
+                                    <td class="p-4 text-center">km</td>
+                                    <td class="p-4 text-right">0,80 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-center" data-price="0.80" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+
+                                <!-- 1.1 Grenzvisualisierung -->
+                                <tr class="bg-slate-100"><td colspan="6" class="p-3 font-bold text-slate-800">1.1 Grenzvisualisierung*</td></tr>
+                                
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.1.001</td>
+                                    <td class="p-4">Grundpauschale (Einholen Katasterdaten & Koordinatentransformation)</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">45,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="45.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.1.002</td>
+                                    <td class="p-4">1-4 Grenzpunkte, pro aufgezeigt</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">20,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="20.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.1.003</td>
+                                    <td class="p-4">ab 5 Grenzpunkte, pro aufgezeigt</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">15,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="15.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+
+                                <!-- 1.2 Bauabsteckung -->
+                                <tr class="bg-slate-100"><td colspan="6" class="p-3 font-bold text-slate-800">1.2 Bauabsteckung</td></tr>
+
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.2.001</td>
+                                    <td class="p-4">Grundpauschale (Aufbereitung Planunterlagen & Absteckplan)</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">45,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="45.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.2.002</td>
+                                    <td class="p-4">1-9 Absteckpunkte, pro abgesteckt</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">12,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="12.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.2.003</td>
+                                    <td class="p-4">ab 10 Absteckpunkte, pro abgesteckt</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">10,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="10.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.2.004</td>
+                                    <td class="p-4">ab 50 Absteckpunkte, pro abgesteckt</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">8,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="8.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+
+                                <!-- 1.3 Bestandsaufnahmen -->
+                                <tr class="bg-slate-100"><td colspan="6" class="p-3 font-bold text-slate-800">1.3 Bestandsaufnahmen</td></tr>
+
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.3.001</td>
+                                    <td class="p-4">Grundpauschale (Vorbereitung & Datenbereitstellung)</td>
+                                    <td class="p-4 text-center">St</td>
+                                    <td class="p-4 text-right">45,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="45.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.3.002</td>
+                                    <td class="p-4">Bestandsaufnahme Gelände (mind. 500m²)</td>
+                                    <td class="p-4 text-center">m²</td>
+                                    <td class="p-4 text-right">0,08 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="0.08" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.3.003</td>
+                                    <td class="p-4">Auswertung zu einem Lageplan PDF/DWG</td>
+                                    <td class="p-4 text-center">m²</td>
+                                    <td class="p-4 text-right">0,10 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="0.10" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.3.004</td>
+                                    <td class="p-4">Zulage Auswertung zu einem digitalem Geländemodell</td>
+                                    <td class="p-4 text-center">m²</td>
+                                    <td class="p-4 text-right">0,05 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="1" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="0.05" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+
+                                <!-- 1.4 Massenermittlungen und sonstige Auswertungen -->
+                                <tr class="bg-slate-100"><td colspan="6" class="p-3 font-bold text-slate-800">1.4 Massenermittlungen und sonstige Auswertungen</td></tr>
+
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.4.001</td>
+                                    <td class="p-4">Sonstiger Außendienst / Regiearbeiten</td>
+                                    <td class="p-4 text-center">Std</td>
+                                    <td class="p-4 text-right">65,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="0.5" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="65.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">1.4.002</td>
+                                    <td class="p-4">Auswertungen mittels CAD-Software</td>
+                                    <td class="p-4 text-center">Std</td>
+                                    <td class="p-4 text-right">55,00 €</td>
+                                    <td class="p-4">
+                                        <input type="number" min="0" step="0.5" class="calc-input w-full p-2 border border-slate-300 rounded focus:outline-none focus:border-orange-500 text-center" data-price="55.00" placeholder="0">
+                                    </td>
+                                    <td class="p-4 text-right font-semibold text-slate-900 row-total">0,00 €</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-slate-800 text-white p-6 sm:p-8 flex flex-col items-end gap-3 rounded-b-xl border-t-4 border-orange-500">
+                        <div class="flex justify-between w-full sm:w-64 text-slate-300">
+                            <span>Nettobetrag:</span>
+                            <span id="net-total" class="font-semibold text-white">0,00 €</span>
+                        </div>
+                        <div class="flex justify-between w-full sm:w-64 text-slate-300">
+                            <span>zzgl. 19% MwSt.:</span>
+                            <span id="tax-total" class="font-semibold text-white">0,00 €</span>
+                        </div>
+                        <div class="w-full sm:w-64 h-px bg-slate-600 my-1"></div>
+                        <div class="flex justify-between w-full sm:w-64 text-lg">
+                            <span class="font-bold">Gesamt (Brutto):</span>
+                            <span id="gross-total" class="font-bold text-orange-400">0,00 €</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-auto border-t border-slate-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-wide">Messmer</h3>
+                <p class="text-sm">Vermessung & Bautechnik</p>
+                <p class="text-sm mt-2">Alexander Messmer<br>Großmeicking 12<br>94532 Außernzell</p>
+            </div>
+            
+            <div class="md:text-right">
+                <p class="text-sm mb-1"><a href="tel:015121076966" class="hover:text-orange-400 transition-colors">Mobil: 0151 21076966</a></p>
+                <p class="text-sm mb-1"><a href="mailto:messmer@vermessungundbautechnik.de" class="hover:text-orange-400 transition-colors">E-Mail: messmer@vermessungundbautechnik.de</a></p>
+                <p class="text-sm text-slate-500 mt-4">St.-Nr.: 153/570/02211</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-4 border-t border-slate-800 text-xs text-center text-slate-500">
+            &copy; <script>document.write(new Date().getFullYear())</script> Messmer Vermessung & Bautechnik. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all input fields in the calculator
+            const inputs = document.querySelectorAll('.calc-input');
+            
+            // Format number to currency string (German locale)
+            function formatCurrency(number) {
+                return number.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            }
+
+            // Calculate totals
+            function calculateTotals() {
+                let netTotal = 0;
+
+                inputs.forEach(input => {
+                    const price = parseFloat(input.getAttribute('data-price'));
+                    // Treat empty input or invalid as 0
+                    const quantity = parseFloat(input.value) || 0;
+                    
+                    const rowTotal = price * quantity;
+                    
+                    // Find the total cell in this row and update it
+                    const rowTotalCell = input.closest('tr').querySelector('.row-total');
+                    if (rowTotalCell) {
+                        rowTotalCell.textContent = formatCurrency(rowTotal);
+                    }
+                    
+                    netTotal += rowTotal;
+                });
+
+                const tax = netTotal * 0.19;
+                const grossTotal = netTotal + tax;
+
+                // Update summary fields
+                document.getElementById('net-total').textContent = formatCurrency(netTotal);
+                document.getElementById('tax-total').textContent = formatCurrency(tax);
+                document.getElementById('gross-total').textContent = formatCurrency(grossTotal);
+            }
+
+            // Add event listeners to trigger calculation on input change
+            inputs.forEach(input => {
+                input.addEventListener('input', calculateTotals);
+            });
+            
+            // Initial calculation to set values to 0,00 € safely
+            calculateTotals();
+        });
+    </script>
+</body>
+</html>
