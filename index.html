@@ -387,12 +387,110 @@
     <div class="container mx-auto px-4 mt-8 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
         <p>© 2026 Messmer Vermessung & Bautechnik. Alle Rechte vorbehalten.</p>
         <div class="space-x-4">
-            <a href="#impressum" class="hover:text-slate-300 transition-colors">Impressum</a>
+            <button type="button" onclick="toggleModal('impressum-modal')" class="hover:text-slate-300 transition-colors underline cursor-pointer">
+                Impressum
+            </button>
             <span>|</span>
-            <a href="#datenschutz" class="hover:text-slate-300 transition-colors">Datenschutz</a>
+            <button type="button" onclick="toggleModal('datenschutz-modal')" class="hover:text-slate-300 transition-colors underline cursor-pointer">
+                Datenschutz
+            </button>
         </div>
     </div>
 </footer>
+
+<!-- IMPRESSUM POPUP (MODAL) -->
+<div id="impressum-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-slate-900 text-slate-200 border border-slate-800 rounded-xl p-6 sm:p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+        <button type="button" onclick="toggleModal('impressum-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl font-bold p-1" aria-label="Schließen">&times;</button>
+        <h2 class="text-2xl font-bold text-white mb-6 border-b border-slate-800 pb-2">Impressum</h2>
+        <div class="space-y-4 text-sm leading-relaxed">
+            <div>
+                <h3 class="font-semibold text-white">Angaben gemäß § 5 DDG:</h3>
+                <p class="mt-1">
+                    Alexander Messmer<br>
+                    Messmer Vermessung & Bautechnik<br>
+                    Großmeicking 12<br>
+                    94532 Außernzell
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white">Kontakt:</h3>
+                <p class="mt-1">
+                    Telefon: 0151 21076966<br>
+                    E-Mail: messmer@vermessungundbautechnik.de
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white">Redaktionell verantwortlich:</h3>
+                <p class="mt-1">
+                    Alexander Messmer<br>
+                    Großmeicking 12<br>
+                    94532 Außernzell
+                </p>
+            </div>
+        </div>
+        <div class="mt-8 text-right">
+            <button type="button" onclick="toggleModal('impressum-modal')" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                Schließen
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- DATENSCHUTZ POPUP (MODAL) -->
+<div id="datenschutz-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-slate-900 text-slate-200 border border-slate-800 rounded-xl p-6 sm:p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+        <button type="button" onclick="toggleModal('datenschutz-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl font-bold p-1" aria-label="Schließen">&times;</button>
+        <h2 class="text-2xl font-bold text-white mb-6 border-b border-slate-800 pb-2">Datenschutzerklärung</h2>
+        <div class="space-y-4 text-sm leading-relaxed">
+            <div>
+                <h3 class="font-semibold text-white">1. Datenschutz auf einen Blick</h3>
+                <p class="mt-1 text-slate-400">Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der DSGVO ist:</p>
+                <p class="mt-1 text-slate-300">
+                    Alexander Messmer<br>
+                    Großmeicking 12<br>
+                    94532 Außernzell<br>
+                    E-Mail: messmer@vermessungundbautechnik.de
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white">2. Bereitstellung der Website und Server-Logfiles</h3>
+                <p class="mt-1 text-slate-400">
+                    Beim Aufruf unserer Website erfasst der Provider der Seiten automatisch Informationen in sogenannten Server-Log-Dateien. 
+                    Dies umfasst z. B. IP-Adresse, Browsertyp, Betriebssystem, Referrer URL sowie Datum und Uhrzeit des Zugriffs. 
+                    Diese Verarbeitung dient der technischen Bereitstellung, Stabilität und Sicherheit der Website (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO).
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white">3. Kontaktaufnahme</h3>
+                <p class="mt-1 text-slate-400">
+                    Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet (Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO).
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-white">4. Ihre Rechte</h3>
+                <p class="mt-1 text-slate-400">
+                    Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.
+                </p>
+            </div>
+        </div>
+        <div class="mt-8 text-right">
+            <button type="button" onclick="toggleModal('datenschutz-modal')" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                Schließen
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT FÜR POPUP-STEUERUNG -->
+<script>
+    function toggleModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.toggle('hidden');
+        }
+    }
+</script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
