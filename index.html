@@ -370,25 +370,29 @@
         </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-10 mt-auto border-t border-slate-800">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
-            <div>
-                <div class="mb-4 text-xs font-semibold uppercase tracking-wider text-slate-300">
-                <a href="#impressum" class="hover:text-white transition-colors">Impressum</a>
-                <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-wide">Messmer</h3>
-                <p class="text-sm">Vermessung & Bautechnik</p>
-                <p class="text-sm mt-2">Alexander Messmer<br>Großmeicking 12<br>94532 Außernzell</p>
-            </div>
-            
-            <div class="md:text-right">
-                <p class="text-sm mb-1"><a href="tel:015121076966" class="hover:text-orange-400 transition-colors">Mobil: 0151 21076966</a></p>
-                <p class="text-sm mb-1"><a href="mailto:messmer@vermessungundbautechnik.de" class="hover:text-orange-400 transition-colors">E-Mail: messmer@vermessungundbautechnik.de</a></p>
-            </div>
+<footer class="bg-slate-900 text-slate-400 py-10 mt-auto border-t border-slate-800">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start text-left gap-6">
+        <div>
+            <h3 class="text-white font-bold text-lg mb-2 uppercase tracking-wide">Messmer</h3>
+            <p class="text-sm font-medium text-slate-300">Vermessung & Bautechnik</p>
+            <p class="text-sm mt-2">Alexander Messmer<br>Großmeicking 12<br>94532 Außernzell</p>
+            <p class="text-sm mt-2">
+                Mobil: 0151 21076966<br>
+                E-Mail: messmer@vermessungundbautechnik.de
+            </p>
         </div>
-        <div class="container mx-auto px-4 mt-8 pt-4 border-t border-slate-800 text-xs text-center text-slate-500">
-            &copy; <script>document.write(new Date().getFullYear())</script> Messmer Vermessung & Bautechnik. Alle Rechte vorbehalten.
+    </div>
+
+    <!-- Untere Zeile für Copyright & Links -->
+    <div class="container mx-auto px-4 mt-8 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>© 2026 Messmer Vermessung & Bautechnik. Alle Rechte vorbehalten.</p>
+        <div class="space-x-4">
+            <a href="#impressum" class="hover:text-slate-300 transition-colors">Impressum</a>
+            <span>|</span>
+            <a href="#datenschutz" class="hover:text-slate-300 transition-colors">Datenschutz</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
